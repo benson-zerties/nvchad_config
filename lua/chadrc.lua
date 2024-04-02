@@ -5,12 +5,19 @@
 local M = {}
 
 M.ui = {
-	theme = "onedark",
+  theme = "onedark",
+  statusline = {
+    --theme = require "my_stl",
+    theme = "default",
+    separator_style = "block",
+  },
 
 	-- hl_override = {
 	-- 	Comment = { italic = true },
 	-- 	["@comment"] = { italic = true },
 	-- },
 }
+
+--M.plugins = 'custom.plugins'
 
 return M
