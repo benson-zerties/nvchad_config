@@ -21,7 +21,6 @@ return {
         "lua-language-server",
         "clangd",
         "rust-analyzer",
-        "rust-language-server",
       }
     }
   },
