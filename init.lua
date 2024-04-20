@@ -2,6 +2,8 @@ local autocmd = vim.api.nvim_create_autocmd
 
 vim.g.base46_cache = vim.fn.stdpath "data" .. "/nvchad/base46/"
 vim.g.mapleader = " "
+-- lust snippets
+vim.g.lua_snippets_path = vim.fn.stdpath "config" .. "/lua/snippets"
 
 -- bootstrap lazy and all plugins
 local lazypath = vim.fn.stdpath "data" .. "/lazy/lazy.nvim"
@@ -40,4 +42,5 @@ vim.schedule(function()
   require "mappings"
 end)
 
-
+-- Workaround: loading via ~/.local/share/nvim/nvchad/lua/nvchad did not work
+require("luasnip.loaders.from_lua").load{ paths = vim.g.lua_snippets_path or "" }
