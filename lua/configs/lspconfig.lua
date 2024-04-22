@@ -28,3 +28,25 @@ lspconfig.rust_analyzer.setup {
   on_init = on_init,
   capabilities = capabilities,
 }
+
+-- lua
+lspconfig.lua_ls.setup {
+  capabilities = capabilities,
+  on_attach = on_attach,
+  settings = {
+    Lua = {
+      format = {
+        enable = true,
+        -- Put format options here
+        -- NOTE: the value should be STRING!!
+        defaultConfig = {
+          indent_style = "space",
+          indent_size = "2",
+        },
+      },
+      diagnostics = {
+          globals = { 'vim' }
+      }
+    },
+  },
+}
