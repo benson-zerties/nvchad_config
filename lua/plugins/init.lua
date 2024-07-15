@@ -24,7 +24,14 @@ return {
       }
     }
   },
-
+  {
+    "danymat/neogen",
+    --lazy = false,
+    cmd = 'Neogen',
+    config = function()
+      require "configs.neogen"
+    end,
+  }
   -- {
   -- 	"nvim-treesitter/nvim-treesitter",
   -- 	opts = {

@@ -7,6 +7,14 @@ local map = vim.keymap.set
 map("n", ";", ":", { desc = "CMD enter command mode" })
 map("i", "jk", "<ESC>")
 
+-- map <leader>bd to close the current filebuffer while keeping the editor window open
+vim.keymap.set('n', '<leader>bd', function ()
+    vim.cmd('bprevious')
+    vim.cmd('bdelete #')
+  end,
+  { noremap = true, silent = true }
+)
+
 -- map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
 
 -- NvChad terminal module configures an empty "" filetype

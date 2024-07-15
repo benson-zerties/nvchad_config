@@ -10,9 +10,9 @@ M.ui = {
     --theme = require "my_stl",
     theme = "default",
     separator_style = "block",
-    order = { "mode", "file", "git", "%=", "lsp_msg", "%=", "diagnostics", "lsp", "encoding", "my_cursor"},
+    order = { "mode", "file", "git", "%=", "lsp_msg", "%=", "diagnostics", "lsp",  "encoding", "my_cursor"},
     modules = {
-      my_cursor = " %#StText# Col %c ",
+      my_cursor = " %#St_sep_r# Col %c ",
       encoding = function()
         return vim.opt.fileencoding:get() .. " [0x%B] "
       end,
